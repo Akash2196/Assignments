@@ -1,0 +1,62 @@
+<!--<div>qndfvqeyfug1yigfyuvdfgyefgy1er`</div>-->
+
+
+<div class="orders view">
+  <div class="container">
+    <header>
+      <h3 style="color:red">{{customer.firstname + "'s Orders"}}</h3>
+
+      <br />
+      <br />
+
+    </header>
+
+    
+    <table class="table table-hover table-striped table-condensed table-bordered ordersTable">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customers of customer.orders" class="table">
+
+          <!--<tr [hiden]="customer.orders || customer.orders.length > 0" class="error">
+        <td colspan="4">
+          <div class="text-center"><strong>No orders found</strong></div>
+        </td>
+      </tr>-->
+          <!--<tr *ngFor="let abc of customer">
+      <td>
+        {{customers.product}}
+      </td>
+        </tr>-->
+          <th>{{customers.product1}}</th>
+          <th>{{customers.quantity}}</th>
+          <th>{{customers.price}}</th>
+
+
+          <th>{{customers.ordertotal}}</th>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+      <!--<div class="container" *ngFor="let product of products">-->
+
+
+
+
+
+
+      </div>
+
+    
+    
+ 
+
+      

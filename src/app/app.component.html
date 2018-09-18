@@ -1,0 +1,35 @@
+<div class="navbar navbar-inverse bg-invese">
+<div class="customerView">
+  <div class="container">
+    <header>
+      <h3>Customers</h3>
+    </header>
+    </div>
+    <div class="row">
+      <div class="span3">
+        First Name:
+        <br />
+        <input class="from-control" ngModel="FirstName"  type="text" placeholder="First name" required />
+
+      </div>
+      <div class="span3">
+        Last Name:
+        <br />
+        <input ngModel="LastName" type="text" placeholder="last name" required />
+
+      </div>
+      <div class="span3">
+        City:
+        <br />
+        <input ngModel="City" type="text" placeholder="city"  required />
+
+      </div>
+      <div class="col-xs-3 p-a-1">
+        <button class="btn btn-block btn-outline-primary"
+                (click)="Add()">
+          Add
+        </button>
+        </div>
+      </div>
+  </div>
+</div>

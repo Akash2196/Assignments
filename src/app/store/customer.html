@@ -1,0 +1,127 @@
+<div class="navbar navbar-inverse bg-inverse">
+  <a class="navbar-brand">Customer Application</a>
+  <br />
+  <a class="p-a-1" href="/Customers">Customers</a>
+  <a class="p-a-1" href="/Products">Products</a>
+  
+</div>
+  <div class="customerView">
+    <div class="container">
+      <header>
+       
+
+      </header>
+      <div class="row">
+        <div class="span3">
+          First Name:
+          <br />
+          <input class="form-control"
+                 type="text" placeholder="First name" required #firstName />
+
+
+        </div>
+
+        <div class="span3">
+          Last Name:
+          <br />
+          <input class="form-control"
+                 type="text" placeholder="last name" required #lastName />
+
+        </div>
+
+        <div class="span3">
+          Address:
+          <br />
+          <input class="form-control"
+                 type="text" placeholder="address" required #address />
+
+        </div>
+
+        <div class="span3">
+          City:
+          <br />
+          <input class="form-control"
+                 type="text" placeholder="city" required #city />
+
+        </div>
+        <div class="span3">
+          id:
+          <br />
+          <input class="form-control"
+                 type="text" placeholder="id" required #id />
+
+        </div>
+
+
+
+        <div class="col-xs-3 p-a-1">
+
+          <button class="btn btn-block btn-outline-primary"
+                  (click)="Add(firstName.value,lastName.value,address.value,city.value,id.value)">
+
+            Add
+          </button>
+          <!--<div *ngFor="let customer of customers" class="col-xs-3 card">
+      {{customer.product}}
+      wflw,f;l,3
+    </div>-->
+        </div>
+      </div>
+      <div class="cardContainer">
+
+       
+          <div *ngFor="let product of products" class="col-xs-3 card">
+            <div class="cardHeader">
+              <h4>
+
+                {{ product.firstname}}
+                <button class ="btn close cardClose"  (click)="remove(product)">
+                  ×</button>
+
+                  {{product.lastname }}
+                  <br />
+
+
+
+              </h4>
+            </div>
+            <div class="card-body">
+
+
+              {{"address:"+product.address}}
+
+
+              <div class="card-text p-a-1">
+                <h4>
+                  {{"City:"+product.city}}
+                </h4>
+              </div>
+              <div class="card-text p-a-1">
+                <h4>
+                  {{"CustomerId:"+product.id}}
+                </h4>
+               
+                <a href="/customer/{{product.id}}">{{product.firstname +"'s orders"}}</a>
+              </div>
+
+              <!--<button class="btn btn-success btn-sm pull-xs-right"
+                (click)="remove(product.id)">
+          Remove
+        </button>-->
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="cardContainer">
+      <div *ngFor="let customer of customers" class="col-xs-3 card">
+        <div class="cardHeader">{{customer.firstName}} {{customer.lastName}}</div>
+        <div class="cardBody">-->
+
+

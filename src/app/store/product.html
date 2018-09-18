@@ -1,0 +1,65 @@
+<div class="navbar navbar-inverse bg-inverse">
+  <a class="navbar-brand">Customer Application</a>
+  <br />
+  <a class="p-a-1" href="/Customers">Customers</a>
+  <a class="p-a-1" href="/Products">Products</a>
+
+</div>
+
+
+<div class="orders view">
+  <div class="container">
+    <header>
+      <h3>All Customer Orders</h3>
+    </header>
+    <div>
+      <div class="row">
+
+
+
+        <div *ngFor="let product of products" class="row">
+
+
+          <h4> {{product.lastname}}</h4>
+          
+         
+          <table class="table table-hover table-striped table-condensed table-bordered ordersTable">
+            <thead>
+              <tr style="color:blue">
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let customers of product.orders" class="table">
+                <!--<tr [hiden]="customer.orders || customer.orders.length > 0" class="error">
+    <td colspan="4">
+      <div class="text-center"><strong>No orders found</strong></div>
+    </td>
+  </tr>-->
+                <!--<tr *ngFor="let abc of customer">
+  <td>
+    {{customers.product}}
+  </td>
+    </tr>-->
+               <th>{{customers.product1}}</th>
+                <th>{{customers.quantity}}</th>
+                <th>{{customers.price}}</th>
+
+
+                <th>{{customers.ordertotal}}</th>
+
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+      </div>
+</div>
+          </div>
+  </div>
+         
